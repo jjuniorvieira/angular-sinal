@@ -5,11 +5,12 @@ import {filter, from, interval, map, mergeMap, of} from 'rxjs';
 import {takeUntilDestroyed} from '@angular/core/rxjs-interop';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {BrowserModule} from '@angular/platform-browser';
+import {UserSearchComponent} from './user-search.component';
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HttpClientModule],
+  imports: [RouterOutlet, HttpClientModule, UserSearchComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   standalone: true
