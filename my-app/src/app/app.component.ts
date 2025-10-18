@@ -1,16 +1,15 @@
-import {Component, NgModule, OnInit} from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { signal, computed } from '@angular/core';
-import {filter, from, interval, map, mergeMap, of} from 'rxjs';
-import {takeUntilDestroyed} from '@angular/core/rxjs-interop';
+import {Component, computed, OnInit, signal} from '@angular/core';
+import {RouterOutlet} from '@angular/router';
+import {from, mergeMap} from 'rxjs';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
-import {BrowserModule} from '@angular/platform-browser';
 import {UserSearchComponent} from './user-search.component';
+import {UserComponent} from './user.component';
+import {CartComponent} from './cart.component';
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HttpClientModule, UserSearchComponent],
+  imports: [RouterOutlet, HttpClientModule, UserSearchComponent, UserComponent, CartComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   standalone: true
@@ -53,12 +52,10 @@ export class AppComponent implements OnInit {
   }
 
 
-
-
   increment() {
     this.counter.update(value => value + 1); // increment by 1
     this.quantity.update(value => value + 1); // increment quantity by 1
-     // Computed signal
+    // Computed signal
 
   }
 }
