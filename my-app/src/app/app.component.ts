@@ -5,11 +5,19 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {UserSearchComponent} from './user-search.component';
 import {UserComponent} from './user.component';
 import {CartComponent} from './cart.component';
+import {DiscountComponent} from './discount.component';
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HttpClientModule, UserSearchComponent, UserComponent, CartComponent],
+  imports: [
+    RouterOutlet,
+    HttpClientModule,
+    UserSearchComponent,
+    UserComponent,
+    CartComponent,
+    DiscountComponent
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   standalone: true
