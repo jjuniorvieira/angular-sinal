@@ -6,6 +6,7 @@ import {UserSearchComponent} from './user-search.component';
 import {UserComponent} from './user.component';
 import {CartComponent} from './cart.component';
 import {DiscountComponent} from './discount.component';
+import {TodoComponent} from './todo.component';
 
 
 @Component({
@@ -16,7 +17,8 @@ import {DiscountComponent} from './discount.component';
     UserSearchComponent,
     UserComponent,
     CartComponent,
-    DiscountComponent
+    DiscountComponent,
+    TodoComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
